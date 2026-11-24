@@ -88,7 +88,7 @@ footer{margin-top:64px;border-top:1px solid var(--line);padding-top:16px;color:v
 <ol>
 <li><b>Caja de distribución (CD):</b> un splitter PLC 1x4 balanceado por cada PON. Cada uno de sus 4 puertos es una cascada.</li>
 <li><b>Cascada:</b> hasta 4 NAPs en serie sobre un solo hilo. Los NAPs intermedios llevan un FBT 70/30: el 30 % baja al 1x8 del NAP y el 70 % sigue al siguiente. El último NAP de la cascada recibe el hilo directo en su 1x8, sin FBT.</li>
-<li><b>NAP:</b> un splitter PLC 1x8 con 8 salidas SC/APC para los drops.</li>
+<li><b>NAP:</b> un splitter PLC 1x8 con 8 salidas SC/APC para los drops..</li>
 </ol>
 <div class="chain"><div><b>OLT VSOL</b><span>SFP GPON C++ · +7 dBm</span></div><div><b>ODF 12p</b><span>SC/APC</span></div><div><b>Troncal</b><span>Mini ADSS 12h</span></div><div><b>CD · 1x4</b><span>PLC · 7.3 dB</span></div><div><b>NAP 1–3</b><span>FBT 70/30 · 30 % al 1x8</span></div><div><b>NAP final</b><span>Directo al 1x8</span></div><div><b>1x8 → drop → ONU</b><span>PLC · 10.5 dB</span></div></div>
 <p>La capacidad máxima por PON es de 4 cascadas × 4 NAPs × 8 clientes = 128, el tope de la OLT VSOL por puerto. Por eso ninguna rama debe llevar splitters adicionales. Nomenclatura: <b>CD1-P2-N3</b> es la caja 1, el puerto 2 del 1x4 y el tercer NAP de esa cascada. En el plano se abrevia como 1-2-3.</p>
